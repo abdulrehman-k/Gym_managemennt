@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProFit Gym</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header / Navigation */
+    header {
+      background: #111;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+         left: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+    }
+    nav .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ff4b2b;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ff4b2b;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1594737625785-dfc2f24c14a4?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .hero a {
+      background: #ff4b2b;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .hero a:hover {
+      background: #ff6f4b;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 5rem 10%;
+    }
+    section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #111;
+    }
+    section p {
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+      color: #555;
+    }
+
+    /* About Us Section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .about img {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .about div {
+      max-width: 500px;
+    }
+
+    /* Membership Section */
+    .membership-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+      transition: 0.3s;
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+    .card h3 {
+      color: #ff4b2b;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .card p {
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    .card button {
+      background: #ff4b2b;
+      color: #fff;
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .card button:hover {
+      background: #ff6f4b;
+    }
+
+    /* Footer */
+    footer {
+        background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px){
+      nav ul {
+        gap: 1rem;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      section {
+        padding: 3rem 5%;
+      }
+      .about {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav>
+      <div class="logo">ProFit Gym</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#membership">Membership</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section / Home -->
+  <section class="hero" id="home">
+    <h1>Welcome to ProFit Gym</h1>
+    <p>Your fitness journey starts here. Train smart, stay strong, and achieve your goals.</p>
+    <a href="#membership">Join Now</a>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about">
+      <img src="https://images.unsplash.com/photo-1594737625785-dfc2f24c14a4?auto=format&fit=crop&w=800&q=80" alt="Gym">
+      <div>
+        <p>ProFit Gym is dedicated to providing top-notch fitness facilities and professional trainers. We offer personalized training programs to help you achieve your fitness goals, whether it’s weight loss, muscle building, or overall health improvement.</p>
+        <p>With state-of-the-art equipment, group classes, and nutrition guidance, we ensure a comprehensive approach to fitness. Join our community and be part of a motivating and supportive environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Section -->
+  <section id="membership">
+    <h2>Membership Plans</h2>
+    <div class="membership-cards">
+      <div class="card">
+        <h3>Basic Plan</h3>
+        <p>Access to gym equipment and locker room facilities.</p>
+        <p>Price: $30/month</p>
+        <button>Sign Up</button>
+      </div>
+      <div class="card">
+        <h3>Standard Plan</h3>
+        <p>Includes gym equipment, group classes, and personal training sessions.</p>
+        <p>Price: $50/month</p>
+        <button>Sign Up</button>
+      </div>
+      <div class="card">
+        <h3>Premium Plan</h3>
+        <p>All-inclusive plan with unlimited classes, personal trainer, and nutrition guidance.</p>
+        <p>Price: $80/month</p>
+        <button>Sign Up</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ProFit Gym. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
